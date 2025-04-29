@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,18 +8,199 @@
   </head>
   <body>
     <header>
-      <div class="menu">
-        <img src="Images/Logo.png" alt="Logo Szop Serwis" />
-        <ul>
-          <li>Strona Główna</li>
-          <li>Cennik</li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div class="navbar">
+        <img class="logo" src="Images/Logo.png" alt="Szop Serwis" />
+        <nav>
+          <ul>
+            <li><a href="#home">Strona Główna</a></li>
+            <li><a href="#uslugi">Usługi</a></li>
+            <li><a href="#cennik">Cennik</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="home">
+        <h1 style="text-align: center">Witamy w Szop Serwis</h1>
+        <p style="text-align: center">
+          Profesjonalna naprawa komputerów i laptopów
+        </p>
+      </section>
+
+      <section id="uslugi">
+        <h2>Nasze Usługi</h2>
+        <div class="services">
+          <div class="card">💻 Naprawa laptopów i komputerów</div>
+          <div class="card">🧹 Czyszczenie i konserwacja</div>
+          <div class="card">🔧 Wymiana dysków i RAM</div>
+          <div class="card">💾 Odzyskiwanie danych</div>
+          <div class="card">📀 Instalacja systemów</div>
+          <div class="card">⚡ Diagnostyka sprzętu</div>
+        </div>
+      </section>
+      <section id="cennik">
+        <h2>Cennik</h2>
+        <div class="price-table">
+          <div class="column">
+            <ul>
+              <li>
+                <strong>Diagnoza:</strong> <span class="price">0 zł</span>
+              </li>
+              <li>
+                <strong>Rozszerzona diagnoza płyty głównej:</strong>
+                <span class="price">200 zł</span>
+              </li>
+              <li>
+                <strong>Instalacja systemu PRO:</strong>
+                <span class="price">120 zł</span>
+              </li>
+              <li>
+                <strong>Odwirusowanie systemu:</strong>
+                <span class="price">100 zł</span>
+              </li>
+              <li>
+                <strong>Złożenie PC z części klienta</strong>
+                <span class="price">200-350 zł</span>
+              </li>
+              <li>
+                <strong>Czyszczenie + wymiana pasty:</strong>
+                <span class="price">200–300 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana matrycy LCD:</strong>
+                <span class="price">100–240 zł</span>
+              </li>
+              <li>
+                <strong>Naprawa płyty głównej/karty graficznej </strong>
+                <span class="price">50-380 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana klawiatury nitowanej:</strong>
+                <span class="price">200–250 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana dysku SSD/HDD:</strong>
+                <span class="price">100–150 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana kamery w laptopie:</strong>
+                <span class="price">100 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana karty graficznej PC:</strong>
+                <span class="price">80–100 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana zasilacza PC:</strong>
+                <span class="price">80–100 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana CPU w PC:</strong>
+                <span class="price">120–200 zł</span>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li>
+                <strong>Diagnoza płyty głównej:</strong>
+                <span class="price">50 zł</span>
+              </li>
+              <li>
+                <strong>Instalacja systemu BASIC:</strong>
+                <span class="price">100 zł</span>
+              </li>
+              <li>
+                <strong>Instalacja PRO + dane:</strong>
+                <span class="price">150 zł</span>
+              </li>
+              <li>
+                <strong>Zgranie danych z dysku:</strong>
+                <span class="price">120 zł</span>
+              </li>
+              <li>
+                <strong>Profesjonalne czyszczenie:</strong>
+                <span class="price">120–160 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana wentylatora:</strong>
+                <span class="price">150 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana klawiatury (nie nitowana):</strong>
+                <span class="price">100 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana baterii BIOS:</strong>
+                <span class="price">30–50 zł</span>
+              </li>
+              <li>
+                <strong>Czyszczenie płyty głównej:</strong>
+                <span class="price">120 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana portu LAN:</strong>
+                <span class="price">80–100 zł</span>
+              </li>
+              <li>
+                <strong>Złożenie PC z części klienta:</strong>
+                <span class="price">150 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana płyty głównej PC:</strong>
+                <span class="price">150–200 zł</span>
+              </li>
+              <li>
+                <strong>Wymiana wentylatora PC:</strong>
+                <span class="price">60–80 zł</span>
+              </li>
+              <li>
+                <strong>Klon systemu + dysk (PC):</strong>
+                <span class="price">280 zł</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="galeria">
+        <h2>Galeria realizacji</h2>
+        <div class="gallery">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Przed naprawą"
+            />
+            <p>Przed naprawą</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Po naprawie" />
+            <p>Po naprawie</p>
+          </div>
+        </div>
+      </section>
+      <section id="opinie">
+        <h2>Opinie klientów</h2>
+        <div class="reviews">
+          <div class="card">"Laptop działa jak nowy, polecam!" – Ania</div>
+          <div class="card">"Szybka naprawa, dobry kontakt." – Michał</div>
+          <div class="card">
+            "Profesjonalne podejście i fajna cena!" – Kasia
+          </div>
+        </div>
+      </section>
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p style="text-align: center">
+          📧 E-mail:
+          <a href="mailto:kontakt@szopserwis.pl">kontakt@szopserwis.pl</a><br />
+          📍 Kościan, wielkopolskie<br /><br />
+          Możesz też napisać do nas przez <a href="#">WhatsApp</a>.
+        </p>
+      </section>
+    </main>
+    <footer>&copy; 2025 Szop Serwis. Wszelkie prawa zastrzeżone.</footer>
   </body>
 </html>
