@@ -21,14 +21,14 @@ header {
 }
 
 .navbar {
-  display: flexbox;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 40%;
 }
 
 .logo {
-  width: 150px;
+  width: 130px;
   margin-bottom: 10px;
 }
 
