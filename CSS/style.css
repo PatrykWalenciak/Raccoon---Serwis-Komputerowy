@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px, 0px;
+  padding: 20px 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -137,144 +137,69 @@ a {
   color: #1e90ff;
   font-weight: bold;
 }
-@media {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
-
+@media (max-width: 768px) {
   header {
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px, 0px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
     text-align: center;
   }
 
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40%;
-  }
-
-  .logo {
-    width: 130px;
-    margin-bottom: 10px;
-  }
-
-  nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
   }
 
   nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
   }
 
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    color: #ff9d00;
+  .logo {
+    width: 100px;
+    margin-bottom: 15px;
   }
 
   section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  h1,
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .services,
-  .gallery,
-  .reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 6px;
-  }
-
-  a {
-    color: #ff9d00;
+    padding: 40px 15px;
   }
 
   .price-table {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .price-table .column {
-    flex: 1;
-    min-width: 300px;
+  .gallery,
+  .services,
+  .reviews {
+    grid-template-columns: 1fr;
   }
 
-  .price-table ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .price-table li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
+  .card {
     font-size: 0.95em;
+    padding: 15px;
   }
 
-  .price-table strong {
-    color: #222;
+  footer {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
   }
 
   .price {
-    color: #1e90ff;
-    font-weight: bold;
+    font-size: 1em;
   }
 }
