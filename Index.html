@@ -202,13 +202,20 @@
       </section>
       <section id="opinie">
         <h2>Opinie klientów</h2>
-        <div class="reviews">
+        <div class="reviews" id="reviews">
           <div class="card">"Laptop działa jak nowy, polecam!" – Ania</div>
           <div class="card">"Szybka naprawa, dobry kontakt." – Michał</div>
           <div class="card">
             "Profesjonalne podejście i fajna cena!" – Kasia
           </div>
         </div>
+
+        <form id="reviewForm" class="card" style="margin-top: 20px">
+          <h3>Dodaj swoją opinię</h3>
+          <input type="text" id="name" placeholder="Twoje imię" required />
+          <textarea id="message" placeholder="Twoja opinia" required></textarea>
+          <button type="submit">Dodaj opinię</button>
+        </form>
       </section>
       <section id="kontakt">
         <h2>Kontakt</h2>
@@ -223,5 +230,7 @@
       </section>
     </main>
     <footer>&copy; 2025 Raccoon. Wszelkie prawa zastrzeżone.</footer>
+    <script src="script.js"></script>
+    <script src="firebase.js"></script>
   </body>
 </html>

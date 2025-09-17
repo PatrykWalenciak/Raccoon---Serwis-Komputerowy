@@ -138,6 +138,34 @@ a {
   font-weight: bold;
 }
 
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#reviewForm input,
+#reviewForm textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+#reviewForm button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#reviewForm button:hover {
+  background: #0f75d1;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
