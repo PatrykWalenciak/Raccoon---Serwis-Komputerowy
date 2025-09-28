@@ -12,19 +12,17 @@ body {
 header {
   background-color: #222;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0px;
+  padding: 15px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: center;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 40%;
+  flex-direction: column;
 }
 
 .logo {
@@ -40,10 +38,11 @@ nav {
 
 nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 30px;
 }
 
 nav ul li a {
