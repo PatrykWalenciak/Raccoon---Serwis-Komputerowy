@@ -171,21 +171,49 @@ a {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     text-align: center;
   }
 
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
+  .burger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  nav {
+    display: none; /* domyślnie ukryte menu */
+    width: 100%;
+  }
+
+  nav.active {
+    display: block; /* po kliknięciu w burgera */
   }
 
   nav ul {
     flex-direction: column;
+    background: #222;
     gap: 15px;
-    margin-top: 15px;
+    padding: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
   }
 
   .logo {
