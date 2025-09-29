@@ -93,21 +93,22 @@
       <section id="rezerwacja">
         <h2>Umów naprawę</h2>
         <form class="card reservation-form">
-          <label for="name">Imię i nazwisko:</label>
+          <label for="from_name">Imię i nazwisko:</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="from_name"
+            name="from_name"
             placeholder="Wpisz swoje imię"
             required
           />
 
-          <label for="email">E-mail:</label>
+          <label for="reply_to">E-mail:</label>
           <input
             type="email"
-            id="email"
-            name="email"
+            id="reply_to"
+            name="reply_to"
             placeholder="Twój adres e-mail"
+            required
           />
 
           <label for="service">Rodzaj usługi:</label>
@@ -118,6 +119,7 @@
             <option value="phone">Naprawa telefonu</option>
             <option value="other">Inne</option>
           </select>
+
           <label for="message">Opis usterki:</label>
           <textarea
             name="message"
@@ -145,7 +147,7 @@
     <footer>
       <p>&copy; 2025 Raccoon. Wszelkie prawa zastrzeżone.</p>
     </footer>
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
