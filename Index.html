@@ -95,11 +95,11 @@
       <section id="rezerwacja">
         <h2>Umów naprawę</h2>
         <form class="card reservation-form">
-          <label for="from_name">Imię i nazwisko:</label>
+          <label for="name">Imię i nazwisko:</label>
           <input
             type="text"
-            id="from_name"
-            name="from_name"
+            id="name"
+            name="name"
             placeholder="Wpisz swoje imię"
             required
           />
@@ -114,12 +114,12 @@
           />
 
           <label for="service">Rodzaj usługi:</label>
-          <select name="service" id="service" required>
+          <select name="subject" id="service" required>
             <option value="">-- Wybierz usługę --</option>
-            <option value="laptop">Naprawa laptopa</option>
-            <option value="pc">Naprawa PC</option>
-            <option value="phone">Naprawa telefonu</option>
-            <option value="other">Inne</option>
+            <option value="Naprawa laptopa">Naprawa laptopa</option>
+            <option value="Naprawa PC">Naprawa PC</option>
+            <option value="Naprawa telefonu">Naprawa telefonu</option>
+            <option value="Inne">Inne</option>
           </select>
 
           <label for="message">Opis usterki:</label>
