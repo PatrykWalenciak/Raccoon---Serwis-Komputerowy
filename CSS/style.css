@@ -222,12 +222,12 @@ form textarea {
   }
 
   nav {
-    display: none; /* domyślnie ukryte menu */
+    display: none;
     width: 100%;
   }
 
   nav.active {
-    display: block; /* po kliknięciu w burgera */
+    display: block;
   }
 
   nav ul {
