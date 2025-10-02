@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_ccdd5jg", "template_83q8vfv", this).then(
+    emailjs.sendForm("service_em8k9n7", "template_83q8vfv", this).then(
       () => {
         alert("✅ Dziękujemy! Twoje zgłoszenie zostało wysłane.");
         form.reset();
