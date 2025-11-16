@@ -93,17 +93,105 @@ h2 {
   text-align: center;
 }
 
+/* ----- GALERIA SLIDER ----- */
+
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+}
+
+/* Strzałki */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff9d00;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.slide-btn:hover {
+  background: #e68a00;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ----- LIGHTBOX (POWIĘKSZENIE) ----- */
+
+#lightbox {
+  display: none; /* pokazywany w JS */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
 footer {
   background-color: #222;
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-}
-
-img {
-  width: 100%;
-  border-radius: 6px;
 }
 
 a {
@@ -208,6 +296,7 @@ form textarea {
   resize: vertical;
 }
 
+/*Responsywnosc*/
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -267,7 +356,15 @@ form textarea {
     font-size: 0.95em;
     padding: 15px;
   }
+  .slider img {
+    width: 240px;
+    height: 160px;
+  }
 
+  .slide-btn {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
   footer {
     font-size: 0.9em;
     padding: 15px;

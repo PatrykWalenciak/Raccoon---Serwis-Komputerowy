@@ -26,3 +26,48 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+
+// ----- SLIDER STRZAŁKI -----
+const slider = document.getElementById("slider");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+next.addEventListener("click", () => {
+  slider.scrollLeft += 300;
+});
+
+prev.addEventListener("click", () => {
+  slider.scrollLeft -= 300;
+});
+
+// ----- LIGHTBOX (POWIĘKSZENIE ZDJĘCIA) -----
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeLightbox = document.getElementById("closeLightbox");
+
+// Kliknięcie zdjęcia = powiększenie
+document.querySelectorAll(".slider img").forEach((img) => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+// Zamknięcie X
+closeLightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Kliknięcie tła zamyka
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
+
+// ESC zamyka
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.style.display = "none";
+  }
+});
