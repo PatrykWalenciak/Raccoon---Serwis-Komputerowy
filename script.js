@@ -58,16 +58,54 @@ closeLightbox.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
 
-// Kliknięcie tła zamyka
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
+// ----- LIGHTBOX Z PRZEŁĄCZANIEM ZDJĘĆ -----
+
+const galleryImages = Array.from(document.querySelectorAll(".slider img"));
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  lightboxImg.src = galleryImages[currentIndex].src;
+  lightbox.style.display = "flex";
+}
+
+// Kliknięcie zdjęcia otwiera lightbox
+galleryImages.forEach((img, index) => {
+  img.addEventListener("click", () => openLightbox(index));
 });
 
-// ESC zamyka
+// Przycisk NEXT
+document.querySelector(".lb-next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+// Przycisk PREV
+document.querySelector(".lb-prev").addEventListener("click", () => {
+  currentIndex =
+    (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+// ESC zamyka lightbox
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     lightbox.style.display = "none";
   }
+
+  // Sterowanie klawiaturą ← →
+  if (e.key === "ArrowRight") {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+  if (e.key === "ArrowLeft") {
+    currentIndex =
+      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+});
+
+// Kliknięcie tła zamyka
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) lightbox.style.display = "none";
 });
