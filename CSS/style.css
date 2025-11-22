@@ -362,6 +362,15 @@ form textarea {
   pointer-events: none;
 }
 
+.cert-img {
+  width: 50%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 .cert-card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
