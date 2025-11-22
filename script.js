@@ -109,3 +109,6 @@ document.addEventListener("keydown", (e) => {
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) lightbox.style.display = "none";
 });
+
+// Zablokowanie prawego kliknięcia myszy
+document.addEventListener("contextmenu", (e) => e.preventDefault());

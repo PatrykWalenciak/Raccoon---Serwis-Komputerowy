@@ -35,17 +35,6 @@
       href="Images/cardlogo.png"
     />
     <link rel="stylesheet" href="CSS/style.css" />
-    <meta name="author" content="Patryk Walenciak" />
-    <meta
-      name="keywords"
-      content="Raccoon Serwis komputerowy, Serwis telefonow, Blog, Zestawy komputerowe"
-    />
-    <meta name="description" content="Serwis komputerów i telefonów" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Profesjonalny serwis komputerów i laptopów — Kościan i okolice. Naprawa laptopów, czyszczenie, instalacja systemów. Szybko i profesjonalnie."
-    />
     <title>Raccoon</title>
   </head>
   <body>
@@ -68,66 +57,20 @@
       </div>
     </header>
     <main>
-      <section class="home">
-        <h1 style="text-align: center">Witamy w Raccoon</h1>
-        <p style="text-align: center">
-          Profesjonalna naprawa komputerów i laptopów
+      <section id="certyfikat" class="certy-section">
+        <h2>Moje certyfikaty</h2>
+        <p class="center-text">
+          Poniżej znajdują sie certyfikaty potwierdzające moje umiejętności z
+          zakresu informatyki, programowania i serwisu komputerowego.
         </p>
-      </section>
-
-      <section id="uslugi">
-        <h2>Nasze Usługi</h2>
-        <div class="services">
-          <div class="card">💻 Naprawa laptopów i komputerów</div>
-          <div class="card">🧹 Czyszczenie i konserwacja</div>
-          <div class="card">🔧 Wymiana dysków i RAM</div>
-          <div class="card">📱 Naprawa telefonów</div>
-          <div class="card">💾 Instalacja systemów</div>
-          <div class="card">⚡ Diagnostyka sprzętu</div>
+        <div class="certy-container">
+          <!-- Każdy certyfikat -->
+          <div
+            class="cert-img"
+            style="background-image: url('./Images/certyfikat-fullstack.png')"
+          ></div>
+          <p class="cert-title">Certyfikat Fullstack Developer</p>
         </div>
-      </section>
-
-      <section id="rezerwacja">
-        <h2>Umów naprawę</h2>
-        <form class="card reservation-form">
-          <label for="name">Imię i nazwisko:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Wpisz swoje imię"
-            required
-          />
-
-          <label for="reply_to">E-mail:</label>
-          <input
-            type="email"
-            id="reply_to"
-            name="reply_to"
-            placeholder="Twój adres e-mail"
-            required
-          />
-
-          <label for="service">Rodzaj usługi:</label>
-          <select name="subject" id="service" required>
-            <option value="">-- Wybierz usługę --</option>
-            <option value="Naprawa laptopa">Naprawa laptopa</option>
-            <option value="Naprawa PC">Naprawa PC</option>
-            <option value="Naprawa telefonu">Naprawa telefonu</option>
-            <option value="Inne">Inne</option>
-          </select>
-
-          <label for="message">Opis usterki:</label>
-          <textarea
-            name="message"
-            id="message"
-            rows="4"
-            placeholder="Opisz problem"
-            required
-          ></textarea>
-
-          <button type="submit" class="btn">Wyślij zgłoszenie</button>
-        </form>
       </section>
       <section id="kontakt">
         <h2>Kontakt</h2>
@@ -140,10 +83,8 @@
         </p>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2025 Raccoon. Wszelkie prawa zastrzeżone.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <footer>&copy; 2025 Raccoon. Wszelkie prawa zastrzeżone.</footer>
+
     <script src="script.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
