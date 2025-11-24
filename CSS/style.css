@@ -458,6 +458,15 @@ form textarea {
     padding: 6px 12px;
   }
 
+  .cert-img {
+    width: auto;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
   footer {
     font-size: 0.9em;
     padding: 15px;
