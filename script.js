@@ -112,3 +112,27 @@ lightbox.addEventListener("click", (e) => {
 
 // Zablokowanie prawego kliknięcia myszy
 document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.createElement("div");
+  tooltip.className = "image-tooltip";
+  document.body.appendChild(tooltip);
+
+  const images = document.querySelectorAll(".galeria img");
+
+  images.forEach(img => {
+    img.addEventListener("mouseenter", () => {
+      tooltip.textContent = img.alt;
+      tooltip.style.opacity = "1";
+    });
+
+    img.addEventListener("mousemove", e => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY + 15 + "px";
+    });
+
+    img.addEventListener("mouseleave", () => {
+      tooltip.style.opacity = "0";
+    });
+  });
+});
