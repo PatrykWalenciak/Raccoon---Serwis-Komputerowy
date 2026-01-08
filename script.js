@@ -114,11 +114,8 @@ lightbox.addEventListener("click", (e) => {
 document.addEventListener("contextmenu", (e) => e.preventDefault());
 
 document.addEventListener("DOMContentLoaded", () => {
-  const tooltip = document.createElement("div");
-  tooltip.className = "image-tooltip";
-  document.body.appendChild(tooltip);
-
-  const images = document.querySelectorAll(".galeria img");
+  const tooltip = document.getElementById("cursorTooltip");
+  const images = document.querySelectorAll("#galeria img");
 
   images.forEach(img => {
     img.addEventListener("mouseenter", () => {
